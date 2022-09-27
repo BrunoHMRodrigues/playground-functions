@@ -123,11 +123,57 @@ function fizzBuzz(arrayNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let stringCodificada = "";
+
+  for (let index = 0; index < string.length; index+=1) {
+    if (string[index] === "a") {
+      stringCodificada += 1;
+    } else if (string[index] === "e") {
+      stringCodificada += 2;
+      
+    } else if (string[index] === "i") {
+      stringCodificada += 3;
+      
+    } else if (string[index] === "o") {
+      stringCodificada += 4;
+      
+    } else if (string[index] === "u") {
+      stringCodificada += 5;
+      
+    } else {
+      stringCodificada += string[index];
+    }
+    
+  }
+
+  return stringCodificada;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let stringDecodificada = "";
+  
+  for (const key in string) {
+    if (string[key] === "1") {
+      stringDecodificada += "a";
+    } else if (string[key] === "2") {
+      stringDecodificada += "e";
+      
+    } else if (string[key] === "3") {
+      stringDecodificada += "i";
+      
+    } else if (string[key] === "4") {
+      stringDecodificada += "o";
+      
+    } else if (string[key] === "5") {
+      stringDecodificada += "u";
+      
+    } else {
+      stringDecodificada += string[key];
+    }    
+  }
+
+  return stringDecodificada;
 }
 
 // Desafio 10
